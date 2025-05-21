@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+---
+
+<Layout>
+	<head>
+		<ClientRouter />
+	</head>
+	<body>
+		<a href="/off/">
+			<div class="bg-gradient-to-b from-black from-35% via-gray-700 via-70% to-[#587c7c] to-100% min-h-screen">
+			<header>
+				<div class="flex text-white">
+					<div class="w-1/2 mx-15 my-5">
+						<p>Verizon</p>
+					</div>
+					<div class="w-1/2 flex justify-end mx-10 my-5">
+						<svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/>
+						</svg>
+						<p>76%</p>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="text-white ml-8 mt-18">
+					<h3 class="text-2xl">Sun, Dec 19</h3>
+					<h4 class="text-xl">🟡 42ºF · ⏱️ 8:45</h4>
+				</div>
+				<div class="text-blue-200 text-[200px] mt-32 text-center">
+					<h1 transition:name="hora">09</h1>
+					<h1 class="-mt-32" transition:name="minuto">34</h1>
+				</div>
+				<div class="flex justify-center -m-4">
+					<svg class="w-10 h-10 text-gray-800 dark:text-blue-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"/>
+					</svg>
+				</div>
+			</main>
+			<footer class="absolute bottom-0 left-0 w-full">
+				<div class="flex m-10">
+					<div class="w-1/2">
+						<svg class="w-6 h-6 bg-white rounded-full text-gray-800 dark:text-cyan-950" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+						</svg>
+					</div>
+					<div class="w-1/2 flex justify-end">
+						<svg class="w-6 h-6 bg-white rounded-full text-gray-800 dark:text-cyan-950" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M6 14h2m3 0h5M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z"/>
+						</svg>
+					</div>
+				</div>
+				<div>
+					<div class="flex justify-center mb-2">
+						<svg class="w-32 h-2" viewBox="0 0 140 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="10" y="2" width="120" height="4" rx="2" fill="#fff" opacity="0.7"/>
+						</svg>
+					</div>
+				</div>
+			</footer>
+			</div>
+		</a>
+	</body>
+</Layout>

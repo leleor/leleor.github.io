@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+---
+
+<Layout>
+	<head>
+		<ClientRouter />
+	</head>
+	<body>
+		<a href="/on/">
+			<div class="bg-black min-h-screen">
+			<header>
+				<div class="flex text-white">
+					<div class="w-1/2 mx-15 my-5">
+						<p>Verizon</p>
+					</div>
+					<div class="w-1/2 flex justify-end mx-10 my-5">
+						<svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/>
+						</svg>
+						<p>76%</p>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="text-white ml-8 mt-18">
+					<h3 class="text-2xl">Sun, Dec 19</h3>
+					<h4 class="text-xl">🟡 42ºF · ⏱️ 8:45</h4>
+				</div>
+				<div class="ml-10 mt-8 flex">
+					<h1 class="stroke-white text-black stroke-2 text-9xl" transition:name="hora">09</h1>
+					<h1 class="stroke-white text-black stroke-2 text-7xl" transition:name="minuto">34</h1>
+				</div>
+				<style>
+					.stroke-white {
+						-webkit-text-stroke: 2px white;
+						text-stroke: 2px white;
+					}
+				</style>
+			</main>
+			</div>
+		</a>
+	</body>
+</Layout>
